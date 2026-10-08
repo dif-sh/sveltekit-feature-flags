@@ -1,0 +1,13 @@
+# pnpm skips dependency install scripts unless they are allowed here.
+# @dif.sh/cli needs its postinstall: it downloads the matching `dif` binary.
+# Without it, `dif build` in prebuild exits 127.
+
+# pnpm 10
+onlyBuiltDependencies:
+  - "@dif.sh/cli"
+  - esbuild
+
+# pnpm 11+
+allowBuilds:
+  "@dif.sh/cli": true
+  esbuild: true

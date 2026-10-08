@@ -1,0 +1,45 @@
+{
+	"name": "sveltekit-feature-flags",
+	"version": "0.1.0",
+	"private": true,
+	"description": "SvelteKit example: feature flags and A/B experiments as .md files in the repo, assigned server-side with dif.sh.",
+	"keywords": [
+		"sveltekit",
+		"svelte",
+		"svelte-5",
+		"feature-flags",
+		"feature-flag",
+		"ab-testing",
+		"experimentation",
+		"dif.sh"
+	],
+	"license": "MIT",
+	"type": "module",
+	"scripts": {
+		"predev": "dif build",
+		"dev": "vite dev",
+		"prebuild": "dif build",
+		"build": "vite build",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync || echo ''",
+		"check": "dif build && svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
+	},
+	"dependencies": {
+		"@dif.sh/sdk": "0.6.3",
+		"@dif.sh/svelte": "0.6.3"
+	},
+	"devDependencies": {
+		"@dif.sh/cli": "0.6.3",
+		"@sveltejs/adapter-auto": "^8.0.0",
+		"@sveltejs/kit": "^3.0.0",
+		"@sveltejs/vite-plugin-svelte": "^7.2.0",
+		"svelte": "^5.57.1",
+		"svelte-check": "^4.6.0",
+		"typescript": "^6.0.3",
+		"vite": "^8.3.0"
+	},
+	"engines": {
+		"node": ">=22.17"
+	},
+	"packageManager": "pnpm@10.22.0"
+}

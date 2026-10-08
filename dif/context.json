@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-10-07T22:48:24.951682Z",
+  "active": [
+    {
+      "id": "new-hero",
+      "surface": "home",
+      "variants": [
+        "off",
+        "on"
+      ],
+      "running_for_days": 0
+    }
+  ],
+  "surfaces": [
+    {
+      "name": "home"
+    }
+  ],
+  "conventions": [
+    "Fire exposure at render, never at assignment."
+  ]
+}
